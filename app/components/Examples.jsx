@@ -12,7 +12,7 @@ var React = require('react');
 // Stateless functional component
 var Examples = (props) => {
   return (
-    <h5>Examples component!!!</h5>
+    <h5>Examples component!</h5>
   );
 }
 
