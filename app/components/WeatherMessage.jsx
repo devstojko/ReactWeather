@@ -22,7 +22,7 @@ var React = require('react');
 // Destructuring syntax
 var WeatherMessage = ({temp, location}) => {
   return(
-    <p>It's it {temp} in {location}.</p>
+    <h3 className="text-center">It's it {temp} in {location}.</h3>
   )
 }
 
