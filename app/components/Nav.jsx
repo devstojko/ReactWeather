@@ -1,25 +1,18 @@
 var React = require('react');
 var {Link, IndexLink} = require('react-router');
 
-// var Nav = React.createClass({
-//   render: function() {
-//     return (
-//       <div>
-//         <h2>This is Nav component</h2>
-//         <IndexLink to="/" activeClassName="active">Get Weather</IndexLink>
-//         <Link to="/about" activeClassName="active">About</Link>
-//         <Link to="/examples" activeClassName="active">Examples</Link>
-//       </div>
-//     );
-//   }
-// });
-
 // Stateless functional component
 var Nav = React.createClass({
   onSearch: function (e) {
     e.preventDefault();
 
-    alert('not yet wired up!');
+    var location = this.refs.search.value;
+    var encodedLocation = encodeURIComponent(location);
+
+    if (location.length > 0) {
+      this.refs.search.value = '';
+      window.location.hash = '#/?location=' + encodedLocation;
+    }
   },
 
   render: function () {
@@ -45,7 +38,7 @@ var Nav = React.createClass({
           <form onSubmit={this.onSearch}>
             <ul className="menu">
               <li>
-                <input type="search" placeholder="Search weather"/>
+                <input type="search" ref="search" placeholder="Search weather"/>
               </li>
               <li>
                 <input type="submit" className="button" value="Get Weather"/>
