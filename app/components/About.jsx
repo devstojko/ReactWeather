@@ -1,14 +1,4 @@
 var React = require('react');
-
-// var About = React.createClass({
-//   render: function() {
-//     return (
-//       <h5>About page</h5>
-//     );
-//   }
-// });
-
-// Stateless functional component
 var About = (props) => {
   return (
     <div>
@@ -19,14 +9,15 @@ var About = (props) => {
       </p>
       <ul>
         <li>
-          <a href="https://facebook.github.io/react">React</a> - JavaScript Framework
+          <a href="https://facebook.github.io/react">React</a>
+          - JavaScript Framework
         </li>
         <li>
-          <a href="http://openweathermap.org">Open Weather Map</a> - API
+          <a href="http://openweathermap.org">Open Weather Map</a>
+          - API
         </li>
       </ul>
     </div>
   );
 };
-
 module.exports = About;

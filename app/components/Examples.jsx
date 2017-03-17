@@ -7,8 +7,6 @@ var {Link} = require('react-router');
 //     );
 //   }
 // });
-
-
 // Stateless functional component
 var Examples = (props) => {
   return (
@@ -26,5 +24,4 @@ var Examples = (props) => {
     </div>
   );
 }
-
 module.exports = Examples;
